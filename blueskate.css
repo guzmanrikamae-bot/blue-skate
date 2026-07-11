@@ -296,14 +296,15 @@ p {
 }
 
 .hero h1 {
-  font-size: 34px;
+  font-size: 44px;
 }
 
-.hero h1 .accent-text {
-  display: inline-block;
-  margin-top: 8px;
-  font-size: 0.72em;
-  font-family: var(--font-accent, inherit);
+.hero-subtitle {
+  font-family: var(--font-accent);
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--accent);
+  margin: 10px 0 18px;
 }
 
 .hero .lede {
