@@ -953,15 +953,40 @@ main {
   margin-bottom: 16px;
 }
 
-.resource-icon {
+.brochure-preview {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.brochure-preview a {
+  flex: 1;
+  display: block;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.brochure-preview img {
   width: 100%;
   height: 220px;
-  background: var(--sky-tint);
-  border-radius: var(--radius-sm);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 16px;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.brochure-preview a:hover img {
+  transform: scale(1.06);
+}
+
+@media (max-width: 460px) {
+  .brochure-preview {
+    flex-direction: column;
+  }
+
+  .brochure-preview img {
+    height: 260px;
+  }
 }
 
 .resource-card h3 {
