@@ -914,6 +914,11 @@ main {
   display: block;
 }
 
+.feature-photos-contain img {
+  object-fit: contain;
+  background: var(--sky-tint);
+}
+
 .feature-card p {
   font-size: 14px;
   color: var(--ink-soft);
