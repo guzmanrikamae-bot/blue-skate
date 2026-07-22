@@ -1176,20 +1176,28 @@ main {
   background: #fff;
 }
 
-.logo-card img {
+.logo-card img,
+.logo-card .logo-svg {
   transition: transform 0.25s ease;
 }
 
-.logo-card:hover img {
+.logo-card:hover img,
+.logo-card:hover .logo-svg {
   transform: scale(1.08);
 }
 
-.logo-card img {
+.logo-card img,
+.logo-card .logo-svg {
   max-width: 100%;
   max-height: 84px;
   width: auto;
   height: auto;
   object-fit: contain;
+}
+
+.logo-card .logo-svg {
+  width: 64px;
+  height: 64px;
 }
 
 .logo-caption {
