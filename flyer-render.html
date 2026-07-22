@@ -1,0 +1,242 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    width: 900px;
+    height: 1000px;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+  }
+  .flyer {
+    position: relative;
+    width: 900px;
+    height: 1000px;
+    background:
+      repeating-conic-gradient(from 0deg at 50% 38%,
+        #eef3c8 0deg 9deg,
+        #bfe3ee 9deg 18deg);
+    overflow: hidden;
+  }
+  .flyer::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 38%, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 55%, rgba(191,227,238,0.9) 100%);
+  }
+  .content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 40px 60px 0;
+  }
+  .eyebrow {
+    color: #1c5c66;
+    font-weight: 800;
+    letter-spacing: 6px;
+    font-size: 22px;
+    margin-bottom: 24px;
+  }
+  .headline {
+    color: #111;
+    font-weight: 900;
+    font-size: 46px;
+    line-height: 1.15;
+    margin-bottom: 20px;
+  }
+  .date {
+    color: #111;
+    font-weight: 900;
+    font-size: 38px;
+    margin-bottom: 26px;
+  }
+  .loc {
+    color: #1c5c66;
+    font-weight: 800;
+    font-size: 21px;
+    margin-bottom: 4px;
+  }
+  .addr {
+    color: #1c5c66;
+    font-weight: 700;
+    font-size: 19px;
+    margin-bottom: 30px;
+  }
+  .sessions {
+    color: #111;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+  .food {
+    color: #111;
+    font-weight: 800;
+    font-size: 24px;
+    margin-bottom: 26px;
+  }
+  .note {
+    color: #1c5c66;
+    font-weight: 800;
+    font-size: 19px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+  .note2 {
+    color: #111;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  .contact {
+    color: #1c5c66;
+    font-weight: 700;
+    font-size: 17px;
+    margin-top: 14px;
+  }
+  .qr-block {
+    position: absolute;
+    left: 36px;
+    top: 620px;
+    text-align: center;
+  }
+  .qr-block img {
+    width: 100px;
+    height: 100px;
+    background: #fff;
+    padding: 4px;
+    border: 2px solid #222;
+  }
+  .qr-block .label {
+    font-weight: 800;
+    font-size: 15px;
+    letter-spacing: 1px;
+    color: #111;
+    margin-top: 6px;
+  }
+  .qr-block.waiver { top: 760px; }
+
+  .clipart {
+    position: absolute;
+    font-size: 90px;
+    line-height: 1;
+    filter: drop-shadow(2px 4px 3px rgba(0,0,0,0.15));
+  }
+  .c1 { top: 20px; right: 30px; transform: rotate(12deg); font-size: 110px; }
+  .c2 { top: 200px; left: 10px; transform: rotate(-8deg); font-size: 95px; }
+  .c3 { bottom: 250px; left: 10px; transform: rotate(-15deg); font-size: 90px; }
+  .c4 { top: 560px; right: 10px; transform: rotate(10deg); font-size: 110px; }
+  .c5 { bottom: 190px; right: 30px; transform: rotate(8deg); font-size: 90px; }
+
+  .logos {
+    position: absolute;
+    bottom: 118px;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    z-index: 2;
+    padding: 0 40px;
+  }
+  .logos img {
+    height: 58px;
+    width: auto;
+    max-width: 130px;
+    object-fit: contain;
+    background: #fff;
+    border-radius: 6px;
+    padding: 3px;
+  }
+  .logos .cb18 {
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 6px;
+    padding: 4px 10px;
+    font-weight: 900;
+    font-size: 15px;
+    color: #003a70;
+    line-height: 1.1;
+    text-align: center;
+  }
+
+  .partners {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #bfe3ee;
+    padding: 14px 30px 20px;
+    text-align: center;
+    border-top: 2px solid #111;
+    z-index: 2;
+  }
+  .partners strong {
+    display: block;
+    font-size: 16px;
+    color: #111;
+    margin-bottom: 6px;
+  }
+  .partners p {
+    font-size: 13px;
+    color: #222;
+    margin: 2px 0;
+  }
+</style>
+</head>
+<body>
+  <div class="flyer">
+    <span class="clipart c1">🌭</span>
+    <span class="clipart c2">🍔</span>
+    <span class="clipart c3">🍢</span>
+    <span class="clipart c4">🛼</span>
+    <span class="clipart c5">🔥</span>
+
+    <div class="content">
+      <div class="eyebrow">COMMUNITY BOARD 18 PRESENTS</div>
+      <div class="headline">A FREE FAMILY SKATE<br>NIGHT &amp; BBQ</div>
+      <div class="date">FRIDAY, JUNE 26, 2026</div>
+      <div class="loc">MILLENNIUM DEVELOPMENT &ndash; JM COMMUNITY CENTER</div>
+      <div class="addr">2331 Bergen Avenue, Brooklyn, NY 11234</div>
+      <div class="sessions">Session 1 - 5:30 PM - 7:00 PM<br>Session 2 - 7:30 PM - 9:00 PM</div>
+      <div class="food">Food and Refreshments - 5:00 PM</div>
+      <div class="note">Equiptment available or bring your own.<br>SAFETY GEAR MUST BE WORN TO PARTICIPATE!</div>
+      <div class="note2">Join us 30 minutes prior for sizing.</div>
+      <div class="note2">Registration is a must, pleaese scan QR Code</div>
+      <div class="contact">For more informaiton contact:<br>BK18@cb.nyc.gov or call (718) 241-0422</div>
+    </div>
+
+    <div class="qr-block register">
+      <img src="images/waiver-qr.png">
+      <div class="label">REGISTER</div>
+    </div>
+    <div class="qr-block waiver">
+      <img src="images/waiver-qr.png">
+      <div class="label">WAIVER</div>
+    </div>
+
+    <div class="logos">
+      <img src="images/BlueSkateIcon.jpg">
+      <div class="cb18">NYC Brooklyn<br>Community Board 18</div>
+      <img src="images/partners/logo_millennium.png">
+      <img src="images/partners/logo_nyc_parks.png">
+      <img src="images/logos/kiwanis.png">
+    </div>
+
+    <div class="partners">
+      <strong>Community Partners</strong>
+      <p>Congress Member Hakeem Jeffries</p>
+      <p>Council Members Mercedes Narcisse, Farah Louis, Chris Banks</p>
+      <p>Assembly Members Jaime Williams, Monique Chandler-Waterman, Kalman Yeger, Nikki Lucas</p>
+      <p>State Senators Roxanne Persaud &amp; Kevin Parker</p>
+      <p>District Leader Frank Seddio</p>
+    </div>
+  </div>
+</body>
+</html>
