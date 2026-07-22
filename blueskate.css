@@ -1222,6 +1222,118 @@ main {
   }
 }
 
+/* ---------- Community event flyer ---------- */
+
+.event-flyer {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+  background: var(--sky-tint);
+  border-radius: var(--radius);
+  padding: 40px 32px;
+}
+
+.event-eyebrow {
+  display: block;
+  font-family: var(--font-accent);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 13px;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.event-title {
+  font-size: 30px;
+  color: var(--primary);
+  margin: 0 0 12px;
+}
+
+.event-date {
+  font-family: var(--font-accent);
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--primary);
+  margin: 0 0 6px;
+}
+
+.event-location {
+  color: var(--ink-soft);
+  margin: 0 0 24px;
+}
+
+.event-sessions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: var(--white);
+  border-radius: var(--radius-sm);
+  padding: 18px 20px;
+  margin: 0 0 20px;
+}
+
+.event-note {
+  font-size: 14px;
+  color: var(--ink-soft);
+  margin: 0 0 10px;
+}
+
+.event-qr {
+  width: 140px;
+  height: 140px;
+  margin: 12px auto 28px;
+  background: #fff;
+  padding: 10px;
+  border-radius: var(--radius-sm);
+  box-shadow: 0 10px 24px -18px rgba(0, 51, 102, 0.35);
+}
+
+.event-partner-logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin: 0 0 24px;
+}
+
+.event-partner-logos img {
+  height: 48px;
+  width: auto;
+  max-width: 100px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.event-partners-text {
+  border-top: 1px solid var(--border);
+  padding-top: 20px;
+}
+
+.event-partners-text strong {
+  display: block;
+  color: var(--primary);
+  font-family: var(--font-accent);
+  margin-bottom: 8px;
+}
+
+.event-partners-text p {
+  font-size: 13px;
+  color: var(--ink-soft);
+  margin: 0 0 4px;
+}
+
+@media (max-width: 600px) {
+  .event-flyer {
+    padding: 32px 20px;
+  }
+
+  .event-title {
+    font-size: 24px;
+  }
+}
+
 /* ---------- Video highlights ---------- */
 
 .video-grid {
